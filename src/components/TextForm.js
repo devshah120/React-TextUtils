@@ -6,7 +6,7 @@ export default function TextForm(props) {
     let NewText = text.toUpperCase();
     setText(NewText);
   };
-  
+
   const handleLowClick = () => {
     // console.log("Upper Case Button Clicked"+text);
     let NewText = text.toLowerCase();
@@ -16,6 +16,12 @@ export default function TextForm(props) {
   const handleOnChange = (event) => {
     // console.log("Value Changed");
     setText(event.target.value);
+  };
+
+  const handleClearClick = (event) => {
+    // console.log("Value Changed");
+    let NewText = "";
+    setText(NewText);
   };
 
   const [text, setText] = useState("Enter Text Here For Conversion");
@@ -36,16 +42,23 @@ export default function TextForm(props) {
         <button
           type="button"
           onClick={handleUpClick}
-          className="btn btn-primary"
+          className="btn btn-primary mx-1"
         >
-          Convert to Uppercase
+          Upper case
         </button>
         <button
           type="button"
           onClick={handleLowClick}
           className="btn btn-primary mx-1"
         >
-          Convert to Lowercase
+          Lower case
+        </button>
+        <button
+          type="button"
+          onClick={handleClearClick}
+          className="btn btn-primary mx-1"
+        >
+          Clear Text
         </button>
       </div>
       <div className="container my-2">
@@ -53,14 +66,16 @@ export default function TextForm(props) {
         <input
           className="form-control my-2"
           type="text"
-          value={text.split(" ").length+" Words & "+text.length+" Characters"}
+          value={
+            text.split(" ").length + " Words & " + text.length + " Characters"
+          }
           disabled
           readOnly
         />
         <input
           className="form-control my-2"
           type="text"
-          value={0.08*text.split(" ").length+" Minutes to Read"}
+          value={0.08 * text.split(" ").length + " Minutes to Read"}
           disabled
           readOnly
         />
