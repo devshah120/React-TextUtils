@@ -24,13 +24,23 @@ export default function TextForm(props) {
     setText(NewText);
   };
 
+  const handleCopyClick = () => {
+    var text = document.getElementById("exampleFormControlTextarea1");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  };
+
   const [text, setText] = useState("Enter Text Here For Conversion");
   return (
     <>
-      <div className="container my-3">
+      <div
+        className="container my-3"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
+            placeholder="Enter Text to Convert"
             className="form-control"
             id="exampleFormControlTextarea1"
             rows="7"
@@ -60,14 +70,29 @@ export default function TextForm(props) {
         >
           Clear Text
         </button>
+        <button
+          type="button"
+          onClick={handleCopyClick}
+          className="btn btn-primary mx-1"
+        >
+          Copy Text
+        </button>
       </div>
-      <div className="container my-2">
+      <div
+        className="container my-2"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         <h1>Your Text Summary</h1>
         <input
           className="form-control my-2"
           type="text"
           value={
-            text.split(" ").length + " Words & " + text.length + " Characters"
+            text === ""
+              ? "0 Words & 0 Characters"
+              : text.split(" ").length +
+                " Words & " +
+                text.length +
+                " Characters"
           }
           disabled
           readOnly
@@ -75,13 +100,18 @@ export default function TextForm(props) {
         <input
           className="form-control my-2"
           type="text"
-          value={0.08 * text.split(" ").length + " Minutes to Read"}
+          value={
+            text === ""
+              ? "0 Minutes to Read"
+              : 0.08 * text.split(" ").length + " Minutes to Read"
+          }
           disabled
           readOnly
         />
         <h2>
           Preview
           <textarea
+            placeholder="Enter Text to Preview"
             className="form-control my-2"
             id="exampleFormControlTextarea1"
             rows="4"
