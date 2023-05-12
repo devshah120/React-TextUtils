@@ -30,7 +30,7 @@ export default function TextForm(props) {
     navigator.clipboard.writeText(text.value);
   };
 
-  const [text, setText] = useState("Enter Text Here For Conversion");
+  const [text, setText] = useState("");
   return (
     <>
       <div
