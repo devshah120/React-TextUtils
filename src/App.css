@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url(../public/DancingScript-Bold.ttf);
+  font-size: xx-large;
+}
+
+.dancing {
+  font-family: "Dancing Script";
+  font-size: 25px;
+}

@@ -27,6 +27,7 @@ export default function TextForm(props) {
   const handleCopyClick = () => {
     var text = document.getElementById("exampleFormControlTextarea1");
     text.select();
+    document.getSelection().removeAllRanges();
     navigator.clipboard.writeText(text.value);
   };
 
@@ -50,30 +51,34 @@ export default function TextForm(props) {
         </div>
 
         <button
+          disabled={text.length === 0}
           type="button"
           onClick={handleUpClick}
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
         >
           Upper case
         </button>
         <button
+          disabled={text.length === 0}
           type="button"
           onClick={handleLowClick}
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
         >
           Lower case
         </button>
         <button
+          disabled={text.length === 0}
           type="button"
           onClick={handleClearClick}
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
         >
           Clear Text
         </button>
         <button
+          disabled={text.length === 0}
           type="button"
           onClick={handleCopyClick}
-          className="btn btn-primary mx-1"
+          className="btn btn-primary mx-1 my-1"
         >
           Copy Text
         </button>
@@ -87,12 +92,12 @@ export default function TextForm(props) {
           className="form-control my-2"
           type="text"
           value={
-            text === ""
-              ? "0 Words & 0 Characters"
-              : text.split(" ").length +
-                " Words & " +
-                text.length +
-                " Characters"
+            text.split(" ").filter((element) => {
+              return element != 0;
+            }).length +
+            " Words & " +
+            text.length +
+            " Characters"
           }
           disabled
           readOnly
@@ -100,10 +105,7 @@ export default function TextForm(props) {
         <input
           className="form-control my-2"
           type="text"
-          value={
-            text === ""
-              ? "0 Minutes to Read"
-              : 0.08 * text.split(" ").length + " Minutes to Read"
+          value={0.008 *  text.split(/\s+/).filter((element)=>{return element.length!==0}).length+" Minutes to Read"
           }
           disabled
           readOnly
@@ -111,7 +113,7 @@ export default function TextForm(props) {
         <h2>
           Preview
           <textarea
-            placeholder="Enter Text to Preview"
+            placeholder="Nothing to Preview!"
             className="form-control my-2"
             id="exampleFormControlTextarea1"
             rows="4"
