@@ -9,6 +9,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -21,6 +25,10 @@ export default function About(props) {
           <div
             id="collapseOne"
             className="accordion-collapse collapse show"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -33,6 +41,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
@@ -45,6 +57,10 @@ export default function About(props) {
           <div
             id="collapseTwo"
             className="accordion-collapse collapse"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -59,6 +75,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
@@ -71,6 +91,10 @@ export default function About(props) {
           <div
             id="collapseThree"
             className="accordion-collapse collapse"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -85,6 +109,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseFour"
@@ -98,6 +126,10 @@ export default function About(props) {
           <div
             id="collapseFour"
             className="accordion-collapse collapse"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -113,6 +145,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseFive"
@@ -125,6 +161,10 @@ export default function About(props) {
           <div
             id="collapseFive"
             className="accordion-collapse collapse"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -140,6 +180,10 @@ export default function About(props) {
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
+              style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseSix"
@@ -152,6 +196,10 @@ export default function About(props) {
           <div
             id="collapseSix"
             className="accordion-collapse collapse"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">

@@ -5,12 +5,14 @@ export default function TextForm(props) {
     // console.log("Upper Case Button Clicked"+text);
     let NewText = text.toUpperCase();
     setText(NewText);
+    props.showAlert("Text Converted to Upper Case", "success");
   };
 
   const handleLowClick = () => {
     // console.log("Upper Case Button Clicked"+text);
     let NewText = text.toLowerCase();
     setText(NewText);
+    props.showAlert("Text Converted to Lower Case", "success");
   };
 
   const handleOnChange = (event) => {
@@ -22,6 +24,7 @@ export default function TextForm(props) {
     // console.log("Value Changed");
     let NewText = "";
     setText(NewText);
+    props.showAlert("Text Clear", "success");
   };
 
   const handleCopyClick = () => {
@@ -29,6 +32,7 @@ export default function TextForm(props) {
     text.select();
     document.getSelection().removeAllRanges();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text Copy to Clipbord", "success");
   };
 
   const [text, setText] = useState("");
@@ -43,8 +47,13 @@ export default function TextForm(props) {
           <textarea
             placeholder="Enter Text to Convert"
             className="form-control"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+              border: "2px solid"
+            }}
             id="exampleFormControlTextarea1"
-            rows="7"
+            rows="6"
             value={text}
             onChange={handleOnChange}
           ></textarea>
@@ -90,10 +99,15 @@ export default function TextForm(props) {
         <h1>Your Text Summary</h1>
         <input
           className="form-control my-2"
+          style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+              border: "2px solid"
+            }}
           type="text"
           value={
-            text.split(" ").filter((element) => {
-              return element != 0;
+            text.split(/\s+/).filter((element) => {
+              return element.length !== 0;
             }).length +
             " Words & " +
             text.length +
@@ -104,8 +118,18 @@ export default function TextForm(props) {
         />
         <input
           className="form-control my-2"
+          style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+              border: "2px solid"
+            }}
           type="text"
-          value={0.008 *  text.split(/\s+/).filter((element)=>{return element.length!==0}).length+" Minutes to Read"
+          value={
+            0.008 *
+              text.split(/\s+/).filter((element) => {
+                return element.length !== 0;
+              }).length +
+            " Minutes to Read"
           }
           disabled
           readOnly
@@ -115,8 +139,13 @@ export default function TextForm(props) {
           <textarea
             placeholder="Nothing to Preview!"
             className="form-control my-2"
+            style={{
+              backgroundColor: props.mode === "dark" ? "#2c3333" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+              border: "2px solid"
+            }}
             id="exampleFormControlTextarea1"
-            rows="4"
+            rows="3"
             value={text}
             disabled
             readOnly
