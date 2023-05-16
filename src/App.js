@@ -5,6 +5,7 @@ import About from "./components/About";
 import Alert from "./components/Alert";
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -51,6 +52,7 @@ function App() {
           />
           <Route path="/about" element={<About mode={mode} />} />
         </Routes>
+        <Footer mode={mode} name="Dev Shah"/>
       </BrowserRouter>
     </>
   );
