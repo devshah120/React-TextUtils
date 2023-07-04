@@ -1,70 +1,35 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📝 WriteHelper 
 
-## Available Scripts
+WriteHelper is a versatile text utility application that offers a range of helpful features. With WriteHelper, you can quickly generate text summaries, easily convert text to upper case or lower case, and conveniently copy text to the clipboard. This application is designed to simplify common text manipulation tasks, saving you time and effort. Whether you need to summarize an article, adjust the case of your text, or efficiently copy content, WriteHelper is here to assist you. It provides a user-friendly interface and intuitive functionality, making it a handy tool for various text-related activities.
 
-In the project directory, you can run:
+## 📲 Try Here 
+### https://writehelper.shahdev.me/
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React, Bootstrap
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Features
 
-### `npm test`
+- Case conversion: With WriteHelper, you can easily convert text to upper case or lower case, depending on your needs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Text copying: The application allows you to conveniently copy    text to the clipboard, making it effortless to transfer or use the content in other documents or applications.
 
-### `npm run build`
+- Time-saving: By automating common text manipulation tasks, WriteHelper helps you save time and effort, allowing you to focus on other important aspects of your work.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Versatile functionality: In addition to the mentioned features, WriteHelper may offer additional capabilities to assist with various text-related activities, making it a versatile tool for different writing needs.
+  
+## 📱 Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Light Mode     |
+| ------------- |
+| ![image](https://github.com/devshah120/React-WriteHelper/assets/72226715/7dfcfc39-429d-434e-b840-8a5fdd9bfbd4)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Dark Mode     |
+| ------------- |
+| ![image](https://github.com/devshah120/React-WriteHelper/assets/72226715/171df208-5b6f-4a36-aa78-3e8e91227801)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| About     |
+| ------------- |
+| ![image](https://github.com/devshah120/React-WriteHelper/assets/72226715/7fb15019-4d59-49c3-8b17-c26946d74fdf)
